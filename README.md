@@ -13,7 +13,8 @@ awareness** and **lazy loading** so the context window stays focused.
 - Topic docs live in `docs/` and are **lazy-loaded** — the agent opens only what the task needs, so
   working on module A doesn't drag module B's docs into the context window.
 - **Two tiers:** *maintained* docs (must match the code) and *historical* docs (specs / plans /
-  devlog — allowed to go stale). Label them so the agent knows which to trust.
+  devlog — allowed to go stale, but **kept forever** as your decision history — never deleted). Label
+  them so the agent knows which to trust.
 - **One fact, one place.** Don't restate the version/roadmap in the root — point to the devlog's top
   row and `todo.md`.
 - **Close the loop.** Every session ends by updating the touched `docs/*.md` and appending to

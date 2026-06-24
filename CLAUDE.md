@@ -28,7 +28,8 @@
   <!-- e.g. - [`docs/conventions.md`](docs/conventions.md) — naming, voice, release flow -->
 - **Historical `docs/specs/*` + `docs/plans/*` (allowed to stale):** per-milestone thinking — a
   record of *how we got here*, **not** the source of truth. Don't trust them where they conflict with
-  the code or this file.
+  the code or this file. **These files are kept permanently — never deleted.** "Stale" means their
+  content may drift over time; they remain as your product-decision history.
 
 ## Conventions
 
