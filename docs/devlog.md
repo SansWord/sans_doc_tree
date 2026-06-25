@@ -4,6 +4,9 @@ Running log of decisions and learnings, **newest first**. The top entry is the p
 state — the root `CLAUDE.md` points here instead of restating the version. This file is *historical*
 (append-only) yet *always current*, because "newest on top" is true forever.
 
+Each entry **references the spec / plan / meeting-note from that session**, so a later session can
+follow the link and pull the right history into context on demand — instead of re-deriving it.
+
 ### Learning tags
 
 | Tag | Meaning |
@@ -14,14 +17,21 @@ state — the root `CLAUDE.md` points here instead of restating the version. Thi
 
 ## TL;DR
 
+One row per version, newest on top, each linking to its full entry below. (Anchors are
+GitHub-auto-generated: lowercase the heading, drop punctuation except hyphens, spaces → hyphens.)
+
 | Version | Summary |
 |---------|---------|
-| v0.1.0  | <!-- one-line summary of the latest entry --> |
+| [v0.1.0](#v010--title-yyyy-mm-dd) | <!-- one-line summary of the latest entry --> |
 
 ---
 
 ## v0.1.0 — <!-- title --> (YYYY-MM-DD)
 
+**Review:** not yet
+**References:** [spec](specs/<file>.md) · [plan](plans/<file>.md) · [meeting-note](meeting-minutes/<file>.md)
+<!-- ^ link THIS session's historical docs so a future session (or a bug traced to this version) can
+     lazily load the right context. Drop the ones that don't apply. -->
 **What shipped:**
 - <!-- ... -->
 

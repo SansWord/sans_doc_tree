@@ -17,8 +17,13 @@ awareness** and **lazy loading** so the context window stays focused.
   them so the agent knows which to trust.
 - **One fact, one place.** Don't restate the version/roadmap in the root — point to the devlog's top
   row and `todo.md`.
+- **Consult before you build.** The root file tells the agent to *read* the relevant docs before
+  planning — and to flag when a new idea conflicts with a past decision, so you decide align-or-update.
 - **Close the loop.** Every session ends by updating the touched `docs/*.md` and appending to
-  `docs/devlog.md`, so knowledge accumulates into a growing rubric.
+  `docs/devlog.md` (linking that entry's spec/plan), so knowledge accumulates into a growing rubric.
+- **Let CLAUDE.md hold the habits.** Anything you'd otherwise have to remember — update the docs
+  before a PR, honor locked decisions — lives in the root file, so the workflow runs without you
+  policing it.
 
 ## How to use
 

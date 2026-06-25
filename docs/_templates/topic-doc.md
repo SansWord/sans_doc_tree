@@ -4,6 +4,9 @@
      update this file in the SAME change. Add this file to the "Docs" list in the root CLAUDE.md
      with a one-line description so future sessions can find it and load it only when relevant. -->
 
+**Update when:** <!-- the concrete trigger that means this doc must be refreshed, e.g. "a module is
+added/removed or changes ownership." Pin the same trigger next to this doc in CLAUDE.md's Docs list. -->
+
 ## Decisions
 
 - <!-- the decisions / rules this doc owns (the things the agent must honor) -->
