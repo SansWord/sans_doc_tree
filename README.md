@@ -29,6 +29,8 @@ anything to fit your project. The wording is opinionated on purpose, so you have
   before a PR, honor locked decisions — lives in the root file, so the workflow runs without you
   policing it.
 
+**Already keep a `docs/` folder?** The highest-value parts to lift: the two-tier *which-tier-wins* labels, *current state = the devlog's top row* (don't restate it), and *read the relevant docs before you plan*.
+
 ## Make it yours
 
 Treat the files as clay, not law — three steps to start:
@@ -51,15 +53,21 @@ section that doesn't fit, keep the root file small (link out to docs/), and add 
 doc under docs/ listed in the Docs section. Then show me what you set up.
 ```
 
+**Start lean, grow into it.** `CLAUDE.md` ships minimal on purpose. When you want more — locked-decision
+logic, a "raise a PR" gate, ADRs — pull the blocks you need from `CLAUDE.advanced.md`.
+
 ## Layout
 
 ```
-CLAUDE.md            ← auto-loaded root: small, stable facts + links out
+CLAUDE.md            ← auto-loaded root (lean by default): stable facts + links out
+CLAUDE.advanced.md   ← optional: the full governance "menu" — copy blocks into CLAUDE.md as you grow
 todo.md              ← the roadmap ("what's next") — its single home
 docs/
   devlog.md          ← append-only history that's also always current (newest on top)
   _templates/
-    topic-doc.md     ← copy this to add a new maintained topic doc
-  specs/             ← historical tier: per-milestone specs (allowed to go stale)
-  plans/             ← historical tier: per-milestone plans (allowed to go stale)
+    topic-doc.md     ← copy to add a maintained topic doc
+    adr.md           ← copy to add a decision record (ADR)
+  specs/             ← historical: per-milestone specs (allowed to go stale)
+  plans/             ← historical: per-milestone plans (allowed to go stale)
+  decisions/         ← historical (optional): ADRs — one per significant decision
 ```
