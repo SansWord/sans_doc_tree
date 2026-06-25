@@ -4,7 +4,11 @@ A reusable starter for **agentic-coding context** — a "document tree" that kee
 (Claude Code, and friends) aligned with your past decisions across sessions, with **automatic
 awareness** and **lazy loading** so the context window stays focused.
 
-> Based on the essay **[The document tree](https://sansword.github.io/sans_blog/doc-tree/)**.
+> Based on the essay **[The document tree](https://sansword.github.io/sans_blog/doc-tree/)** — with a
+> companion on verifying it: **[How to tell if it's working](https://sansword.github.io/sans_blog/doc-tree/how-to-tell/)**.
+
+**This is a starting point, not a rulebook.** Every file here is a draft — keep, rewrite, or delete
+anything to fit your project. The wording is opinionated on purpose, so you have something to react to.
 
 ## The idea in one breath
 
@@ -25,23 +29,45 @@ awareness** and **lazy loading** so the context window stays focused.
   before a PR, honor locked decisions — lives in the root file, so the workflow runs without you
   policing it.
 
-## How to use
+**Already keep a `docs/` folder?** The highest-value parts to lift: the two-tier *which-tier-wins* labels, *current state = the devlog's top row* (don't restate it), and *read the relevant docs before you plan*.
 
-1. Click **Use this template** (or copy these files into your repo).
-2. Rename `CLAUDE.md` → `AGENTS.md` if your tool uses that name — the content is tool-agnostic.
-3. Fill the `<!-- TODO -->` placeholders in `CLAUDE.md`.
-4. Add topic docs under `docs/` (copy `docs/_templates/topic-doc.md`) and list each one in `CLAUDE.md`.
-5. Build. End each session with the **End-of-session checklist** in `CLAUDE.md`.
+## Make it yours
+
+Treat the files as clay, not law — three steps to start:
+
+1. Click **Use this template** (or copy these files in). Rename `CLAUDE.md` → `AGENTS.md` if your tool
+   uses that name — the content is tool-agnostic.
+2. Open `CLAUDE.md`, fill the `<!-- TODO -->` bits (project, who you are, how you like the agent to
+   work), and **cut any section that doesn't fit**.
+3. Add your first topic doc (copy `docs/_templates/topic-doc.md` into `docs/`, list it under **Docs**),
+   then build — and at session end, run the **End-of-session checklist**, tweaking it until the loop
+   feels like yours.
+
+**Or let your coding agent do it — paste this:**
+
+```
+Set up this repo's "document tree." Read README.md and CLAUDE.md, then ask me a few quick
+questions to fill every <!-- TODO --> in CLAUDE.md — what this project is, who I am and how I
+like you to work, the stable facts (repo / hosting / stack), and our conventions. Delete any
+section that doesn't fit, keep the root file small (link out to docs/), and add a first topic
+doc under docs/ listed in the Docs section. Then show me what you set up.
+```
+
+**Start lean, grow into it.** `CLAUDE.md` ships minimal on purpose. When you want more — locked-decision
+logic, a "raise a PR" gate, ADRs — pull the blocks you need from `CLAUDE.advanced.md`.
 
 ## Layout
 
 ```
-CLAUDE.md            ← auto-loaded root: small, stable facts + links out
+CLAUDE.md            ← auto-loaded root (lean by default): stable facts + links out
+CLAUDE.advanced.md   ← optional: the full governance "menu" — copy blocks into CLAUDE.md as you grow
 todo.md              ← the roadmap ("what's next") — its single home
 docs/
   devlog.md          ← append-only history that's also always current (newest on top)
   _templates/
-    topic-doc.md     ← copy this to add a new maintained topic doc
-  specs/             ← historical tier: per-milestone specs (allowed to go stale)
-  plans/             ← historical tier: per-milestone plans (allowed to go stale)
+    topic-doc.md     ← copy to add a maintained topic doc
+    adr.md           ← copy to add a decision record (ADR)
+  specs/             ← historical: per-milestone specs (allowed to go stale)
+  plans/             ← historical: per-milestone plans (allowed to go stale)
+  decisions/         ← historical (optional): ADRs — one per significant decision
 ```
