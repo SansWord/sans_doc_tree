@@ -1,3 +1,7 @@
+<!-- This is a starter template. Every section below is a DEFAULT — keep, rewrite, or delete it to fit
+     your project. The imperative voice is just how a coding agent reads instructions; once the content
+     is yours, the tone works for the agent, it isn't a rulebook for you. Delete this comment when done. -->
+
 # <!-- TODO: Project Name --> — Project Context
 
 <!-- One short paragraph: what this project is. This file is AUTO-LOADED into every coding session,
