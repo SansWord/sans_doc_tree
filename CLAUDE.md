@@ -22,14 +22,23 @@
 
 ## Locked decisions
 
-> **Settled calls — honor them; don't re-litigate or ship something that conflicts with one.** Keep
-> each as a one-liner that points to the canonical doc for the rule + rationale, so the decision lives
-> in **one place**. If a decision changes, update the canonical doc first, then this one-liner — never
-> let them disagree.
+> **Settled calls. The lock guards against *silent* drift — not against changing your mind on
+> purpose.** Keep each as a one-liner pointing to the canonical doc (rule + rationale), so the
+> decision lives in **one place**.
 >
-> **Flag conflicts during planning/brainstorm:** if a proposed change (or my prompt) contradicts a
-> locked decision or a maintained doc, say so and ask whether to (a) align with the past decision or
-> (b) change it — and if (b), update the doc this session. Don't silently diverge.
+> **It depends on the phase:**
+> - **Writing a plan from a spec, or implementing a plan → obey them.** These stages are about
+>   fidelity, not invention — don't re-open or quietly work around a locked decision here. If the work
+>   seems to *require* breaking one, **stop and surface it**; don't improvise past it.
+> - **Brainstorming, spec'ing, or an explicit human decision → challenge them freely.** This is the
+>   moment to revisit a constraint. If a new idea conflicts with a locked decision, name the conflict
+>   and ask whether to (a) keep the decision or (b) unlock it. Past constraints shouldn't silently
+>   block new thinking here — they should be visible so the choice is deliberate.
+>
+> **To unlock / change a decision (in the open, never silently):** update the canonical doc + this
+> one-liner with the new rule, and **log the change and its reason** in [`docs/devlog.md`](docs/devlog.md)
+> (or an ADR under `docs/decisions/` if your flow uses one). The superseded decision stays in the
+> historical record, so the *why* of the change is preserved — then the new decision is the one to honor.
 
 <!-- - **<decision>** — one-liner. Detail → [`docs/<canonical>.md`](docs/<canonical>.md). -->
 
