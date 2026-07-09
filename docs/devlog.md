@@ -29,7 +29,7 @@ GitHub-auto-generated: lowercase the heading, drop punctuation except hyphens, s
 ## v0.1.0 — <!-- title --> (YYYY-MM-DD)
 
 **Review:** not yet
-**References:** [spec](specs/<file>.md) · [plan](plans/<file>.md) · [meeting-note](meeting-minutes/<file>.md)
+**References:** [spec](superpowers/specs/<file>.md) · [plan](superpowers/plans/<file>.md) · [meeting-note](meeting-minutes/<file>.md)
 <!-- ^ link THIS session's historical docs so a future session (or a bug traced to this version) can
      lazily load the right context. Drop the ones that don't apply. -->
 **What shipped:**

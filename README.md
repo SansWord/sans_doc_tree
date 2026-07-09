@@ -53,21 +53,28 @@ section that doesn't fit, keep the root file small (link out to docs/), and add 
 doc under docs/ listed in the Docs section. Then show me what you set up.
 ```
 
-**Start lean, grow into it.** `CLAUDE.md` ships minimal on purpose. When you want more — locked-decision
-logic, a "raise a PR" gate, ADRs — pull the blocks you need from `CLAUDE.advanced.md`.
+**Batteries included — trim to taste.** `CLAUDE.md` ships with the full default workflow: locked
+decisions, the **superpowers** dev cycle (brainstorm → spec → plan → implement), a "raise a PR" gate,
+conventions, and a pre-commit scan. Cut any block that doesn't fit. Extras that *aren't* in the default
+— a stricter unlock protocol, ADRs — live in `CLAUDE.advanced.md`.
+
+> **Using the superpowers plugin?** The default is wired to its paths out of the box:
+> `superpowers:brainstorming` → `docs/superpowers/specs/`, `superpowers:writing-plans` →
+> `docs/superpowers/plans/`. Not using it? Point the dev-cycle block at any spec/plan folders you like.
 
 ## Layout
 
 ```
-CLAUDE.md            ← auto-loaded root (lean by default): stable facts + links out
-CLAUDE.advanced.md   ← optional: the full governance "menu" — copy blocks into CLAUDE.md as you grow
+CLAUDE.md            ← auto-loaded root (batteries-included default): stable facts + links + workflow
+CLAUDE.advanced.md   ← extras NOT in the default (unlock protocol, ADRs) — copy in if wanted
 todo.md              ← the roadmap ("what's next") — its single home
 docs/
   devlog.md          ← append-only history that's also always current (newest on top)
   _templates/
     topic-doc.md     ← copy to add a maintained topic doc
     adr.md           ← copy to add a decision record (ADR)
-  specs/             ← historical: per-milestone specs (allowed to go stale)
-  plans/             ← historical: per-milestone plans (allowed to go stale)
+  superpowers/
+    specs/           ← historical: per-milestone specs (superpowers:brainstorming output)
+    plans/           ← historical: per-milestone plans (superpowers:writing-plans output)
   decisions/         ← historical (optional): ADRs — one per significant decision
 ```
